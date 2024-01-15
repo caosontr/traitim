@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #heart {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation: heartbeat 1s infinite;
+        }
+        #heart::before,
+        #heart::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 50px;
+            height: 80px;
+            border-radius: 50px 50px 0 0;
+            background: #fc2e5e;
+        }
+        #heart::before {
+            left: 50px;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+        #heart::after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="heart"></div>
+
+    <script>
+        // JavaScript không cần thiết trong ví dụ này
+    </script>
+</body>
+</html>
